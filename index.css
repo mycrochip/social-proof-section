@@ -104,7 +104,7 @@ body {
     text-align: left;
     background-color: var(--clr-primary);
     border-radius: 0.5rem;
-    padding: 2.5rem 2rem;
+    padding: 2.375rem 2rem;
     position: relative;
 }
 
@@ -134,6 +134,7 @@ body {
 
 .card__name {
     color: var(--clr-white);
+    font-weight: 500;
 }
 
 .card__name,
@@ -150,7 +151,7 @@ body {
 .card__text {
     padding-top: 2rem;
     font-size: var(--fs-main);
-    line-height: 1.5;
+    line-height: 1.4;
 }
 
 .attribution {
@@ -165,8 +166,8 @@ body {
   @media only screen and (min-width: 1221px){
     body {
         width: 100vw;
-        padding-block-start: max(50px, 10vw);
-        padding-inline: max(50px, 10vw);
+        padding-block-start: max(50px, 20vh);
+        padding-inline: max(50px, 12vw);
         background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
         background-size: auto auto;
         background-position: top left, bottom right;
@@ -192,13 +193,14 @@ body {
     .ratings {
         grid-area: ratings;
         position: relative;
+        margin: auto;
     }
 
     .cards {
         grid-area: cards;
         flex-direction: row;
         gap: 2rem;
-        margin-top: 2rem;
+        margin-block-start: 2rem;
     }
 
     .card__text {
@@ -210,24 +212,25 @@ body {
     }
 
     .title {
-        font-size: 3rem;
-        padding-bottom: 2rem;
+        font-size: 3.5rem;
+        margin: -1rem 0 0 0;
+        padding-bottom: 1rem;
     }
 
     .title,
     .description {
-        width: 450px;
-        margin: 0;
+        width: 500px;
     }
 
     .description {
         font-size: 1.1rem;
+        margin: 0;
     }
 
     .rating {
         width: 80%;
-        font-size: 1.1rem;
-        padding-block: 1.5rem;
+        font-size: 1rem;
+        padding-block: 1rem;
         padding-inline: calc(4rem + 100px) 2rem;
         position: relative;
     }
@@ -247,13 +250,13 @@ body {
     }
 
     .card--colton {
-        margin-top: -2rem;
-        margin-bottom: 2rem;
+        margin-top: -1rem;
+        margin-bottom: 1rem;
     }
 
     .card--anne {
-        margin-top: 2rem;
-        margin-bottom: -2rem;
+        margin-top: 1rem;
+        margin-bottom: -1rem;
     }
 
   }
