@@ -1,0 +1,258 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700&display=swap');
+
+/*###############
+  Global styles 
+################*/
+:root {
+    /* Layout */
+    --mobile-vw: 375px;
+    --desktop-vw: 1440px;
+
+    /* Color */
+    --clr-primary: hsl(300, 43%, 22%);
+    --clr-secondary: hsl(333, 80%, 67%);
+    --clr-accent: hsl(303, 10%, 53%);
+    --clr-pale: hsl(300, 24%, 96%);
+    --clr-white: hsl(0, 0%, 100%);
+
+    /* Typography */
+    --ff-main: 'Outfit', sans-serif;
+    --fs-main: 0.9375rem;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    min-width: var(--mobile-vw);
+    height: auto;
+    margin: auto;
+    padding: 3.5rem 6.5vw 0;
+    background-color: var(--clr-white);
+    background-image: url(images/bg-pattern-top-mobile.svg), url(images/bg-pattern-bottom-mobile.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-size: contain, cover;
+    background-position: top left, bottom;
+    font-family: var(--ff-main);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title {
+    width: 300px;
+    margin: 1rem auto;
+    color: var(--clr-primary);
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 0.875;
+}
+
+.description {
+    margin: 2rem auto;
+    color: var(--clr-accent);
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.ratings,
+.cards {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+
+.rating {
+    color: var(--clr-primary);
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: var(--clr-pale);
+    border-radius: 0.5rem;
+    padding-block: 3rem 1rem;
+    width: 100%;
+    margin: auto;
+    position: relative;
+}
+
+.rating::after {
+    content: "";
+    width: 100px;
+    height: 20px;
+    position: absolute;
+    background-image: url(images/icon-star.svg);
+    background-repeat: space;
+    inset: 1rem 0;
+    margin: 0 auto;
+}
+
+.card {
+    width: 100%;
+    color: var(--clr-pale);
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: left;
+    background-color: var(--clr-primary);
+    border-radius: 0.5rem;
+    padding: 2.5rem 2rem;
+    position: relative;
+}
+
+.card::after {
+    content: "";
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    border-radius: 50%;
+    top: 2.5rem;
+    left: 2rem;
+}
+
+.card--colton::after {
+    background-image: url(images/image-colton.jpg);
+}
+
+.card--irene::after {
+    background-image: url(images/image-irene.jpg);
+}
+
+.card--anne::after {
+    background-image: url(images/image-anne.jpg);
+}
+
+.card__name {
+    color: var(--clr-white);
+}
+
+.card__name,
+.card__status {
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 4rem;
+}
+
+.card__status {
+    color: var(--clr-secondary);
+}
+
+.card__text {
+    padding-top: 2rem;
+    font-size: var(--fs-main);
+    line-height: 1.5;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
+  @media only screen and (min-width: 1221px){
+    body {
+        width: 100vw;
+        padding-block-start: max(50px, 10vw);
+        padding-inline: max(50px, 10vw);
+        background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+        background-size: auto auto;
+        background-position: top left, bottom right;
+        text-align: left;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "hero ratings"
+            "cards cards"
+            "footer footer";
+        gap: 3vw;
+    }
+
+    .hero {
+        grid-area: hero;
+    }
+
+    .ratings {
+        grid-area: ratings;
+        position: relative;
+    }
+
+    .cards {
+        grid-area: cards;
+        flex-direction: row;
+        gap: 2rem;
+        margin-top: 2rem;
+    }
+
+    .card__text {
+        font-size: 1.1rem;
+    }
+
+    .footer {
+        grid-area: footer;
+    }
+
+    .title {
+        font-size: 4rem;
+        padding-bottom: 2rem;
+    }
+
+    .title,
+    .description {
+        width: 500px;
+        margin: 0;
+    }
+
+    .description {
+        font-size: 1.2rem;
+    }
+
+    .rating {
+        width: 80%;
+        font-size: 1.2rem;
+        padding-block: 1.5rem;
+        padding-inline: calc(4rem + 100px) 2rem;
+        position: relative;
+    }
+
+    .rating::after {
+        left: 2rem;
+        margin-block: auto;
+        margin-inline: 0;
+    }
+    
+    .rating--1 {
+        margin-left: 0;
+    }
+
+    .rating--3 {
+        margin-right: 0;
+    }
+
+    .card--colton {
+        margin-top: -2rem;
+        margin-bottom: 2rem;
+    }
+
+    .card--anne {
+        margin-top: 2rem;
+        margin-bottom: -2rem;
+    }
+
+  }
