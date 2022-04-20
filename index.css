@@ -166,7 +166,7 @@ body {
   @media only screen and (min-width: 1221px){
     body {
         width: 100vw;
-        padding-block-start: max(50px, 20vh);
+        padding-block-start: max(50px, 17vh);
         padding-inline: max(50px, 12vw);
         background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
         background-size: auto auto;
@@ -200,7 +200,7 @@ body {
         grid-area: cards;
         flex-direction: row;
         gap: 2rem;
-        margin-block-start: 2rem;
+        margin-block-start: 1.5rem;
     }
 
     .card__text {
