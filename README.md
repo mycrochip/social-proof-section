@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/mycrochip/social-proof-section.git](https://github.com/mycrochip/social-proof-section.git)
+- Live Site URL: [https://mycrochip.github.io/social-proof-section/](https://mycrochip.github.io/social-proof-section/)
 
 
 
