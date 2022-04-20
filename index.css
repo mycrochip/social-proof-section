@@ -230,7 +230,7 @@ body {
     .rating {
         width: 80%;
         font-size: 1rem;
-        padding-block: 1rem;
+        padding-block: 1.3rem;
         padding-inline: calc(4rem + 100px) 2rem;
         position: relative;
     }
