@@ -176,7 +176,7 @@ body {
     .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
+        grid-template-rows: 250px auto;
         grid-template-areas: 
             "hero ratings"
             "cards cards"
@@ -186,6 +186,7 @@ body {
 
     .hero {
         grid-area: hero;
+        align-self: flex-start;
     }
 
     .ratings {
@@ -201,7 +202,7 @@ body {
     }
 
     .card__text {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .footer {
@@ -209,23 +210,23 @@ body {
     }
 
     .title {
-        font-size: 4rem;
+        font-size: 3rem;
         padding-bottom: 2rem;
     }
 
     .title,
     .description {
-        width: 500px;
+        width: 450px;
         margin: 0;
     }
 
     .description {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .rating {
         width: 80%;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         padding-block: 1.5rem;
         padding-inline: calc(4rem + 100px) 2rem;
         position: relative;
